@@ -94,19 +94,6 @@
       </div>
     </section>
 
-    <section id="combo" class="combo">
-      <div class="wrap combo-inner">
-        <div>
-          <p class="eyebrow">Sabay na</p>
-          <h2>Noodles + Coco Mogu</h2>
-          <p>Hong Kong-style fried noodles with siomai and any Coco Mogu flavor. Swak sa merienda, swak sa budget.</p>
-        </div>
-        <div class="combo-price">
-          <p class="big-price">₱110</p>
-          <a class="btn btn-dark" href="#order">Order both</a>
-        </div>
-      </div>
-    </section>
 
     <section id="order" class="wrap section">
       <h2>How to order</h2>
@@ -255,9 +242,12 @@
 
           <div class="actions">
             <button type="submit" class="btn" id="send-order">Send order</button>
-            <a class="btn btn-outline" href="tel:09940401443">Call 0994 040 1443</a>
           </div>
           <p id="form-status" class="form-status" aria-live="polite"></p>
+          <div id="order-again" class="order-again" hidden>
+            <p>Want to order again? Refresh this page, or tap the button below.</p>
+            <button type="button" id="new-order" class="btn btn-outline">Start a new order</button>
+          </div>
           <p id="send-fallback" class="send-fallback" hidden>You can still send it: <a id="fallback-link" href="mailto:natejoaquinaguisanda@gmail.com">send by your email app</a>, or copy the order below and email it to natejoaquinaguisanda@gmail.com, or call 0994 040 1443.</p>
 
           <div id="order-preview" class="order-preview" hidden>

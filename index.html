@@ -10,12 +10,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
 
   <header class="site-header wrap">
     <a class="brand" href="#top">
-      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15" fill="#1E2A1B"/><circle cx="17" cy="17" r="10" fill="#FBF4E6"/><circle cx="13" cy="9" r="1.6" fill="#1E2A1B"/><circle cx="21" cy="9" r="1.6" fill="#1E2A1B"/><circle cx="17" cy="14" r="1.6" fill="#1E2A1B"/></svg>
+      <img src="images/logo.svg" width="48" height="48" alt="">
       <span>Coco Mogu <em>&amp;</em> Fried Noodles</span>
     </a>
     <nav class="nav" aria-label="Main">
@@ -43,11 +44,17 @@
           <p class="price-line">Coco Mogu ₱50 · Hong Kong-Style Fried Noodles ₱60</p>
         </div>
       </div>
-      <div class="photos">
-        <img class="photo-coco" src="images/coco-mogu.jpg" width="1536" height="1024" alt="Coco Mogu in strawberry, lychee and cucumber lemon flavors, each with nata de coco">
-        <div class="photo-noodles">
-          <img src="images/hk-fried-noodles.jpg" width="1044" height="1544" alt="Hong Kong-style fried noodles topped with steamed siomai">
-          <p class="photo-badge" aria-hidden="true"><span>Coco<br>Mogu</span><em>&amp;</em><small>Fried<br>Noodles</small></p>
+      <div class="photo-stage">
+        <div class="photos">
+          <figure class="photo photo-coco">
+            <img src="images/coco-mogu.jpg" width="1536" height="1024" alt="Coco Mogu in strawberry, lychee and cucumber lemon flavors, each with nata de coco">
+            <figcaption class="photo-tag"><a href="#menu">Coco Mogu <b>₱50</b></a></figcaption>
+          </figure>
+          <figure class="photo photo-noodles">
+            <img src="images/hk-fried-noodles.jpg" width="1044" height="1282" alt="Hong Kong-style fried noodles topped with steamed siomai">
+            <p class="photo-badge" aria-hidden="true"><span>Coco<br>Mogu</span><em>&amp;</em><small>Fried<br>Noodles</small></p>
+            <figcaption class="photo-tag"><a href="#menu">HK-Style Noodles <b>₱60</b></a></figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -59,11 +66,11 @@
 
           <div class="menu-col">
             <h3>Coco Mogu</h3>
-            <p class="muted">Three flavors, and every cup comes with chewy nata de coco. ₱50 for any flavor.</p>
+            <p class="muted">Three flavors, ₱50 each. Comes with chewy nata de coco, or without if you prefer.</p>
             <ul class="menu-list">
-              <li><div><strong>Cucumber</strong><span>Cool cucumber with a squeeze of lemon, plus nata de coco</span></div><b>₱50</b></li>
-              <li><div><strong>Lychee</strong><span>With real fresh lychee fruit, plus nata de coco</span></div><b>₱50</b></li>
-              <li><div><strong>Strawberry</strong><span>Sweet strawberry jam, plus nata de coco</span></div><b>₱50</b></li>
+              <li><div><strong>Cucumber</strong><span>Cool cucumber with a squeeze of lemon</span></div><b>₱50</b></li>
+              <li><div><strong>Lychee</strong><span>With real fresh lychee fruit</span></div><b>₱50</b></li>
+              <li><div><strong>Strawberry</strong><span>Sweet strawberry jam</span></div><b>₱50</b></li>
             </ul>
           </div>
 
@@ -71,16 +78,16 @@
             <h3>Fried Noodles</h3>
             <p class="muted">Hong Kong-style fried noodles topped with steamed siomai. No other toppings, just noodles and siomai.</p>
             <ul class="menu-list">
-              <li><div><strong>Hong Kong-Style Fried Noodles with Siomai</strong><span>With your choice of sauce, free</span></div><b>₱60</b></li>
+              <li><div><strong>Hong Kong-Style Fried Noodles with Siomai</strong><span>With or without sauce.</span></div><b>₱60</b></li>
             </ul>
-            <p class="label">Pick your sauce · free</p>
+            <p class="label">Add sauces (optional) · free · mix as many as you like</p>
             <ul class="chips">
               <li>BBQ</li>
               <li>Oyster</li>
               <li>Teriyaki</li>
               <li>Peanut</li>
             </ul>
-            <p class="chili"><span class="tag">+ Chili garlic</span> <span class="muted">Want it spicy? Chili garlic is free too.</span></p>
+            <p class="chili"><span class="tag">+ Chili garlic</span> <span class="muted">Want it spicy?</span></p>
           </div>
 
         </div>
@@ -106,8 +113,8 @@
       <ol class="steps">
         <li>
           <span class="step-no">01</span>
-          <h3>Message or call us</h3>
-          <p>Send your order on <a href="https://www.facebook.com/nathan.aguisanda.5" target="_blank" rel="noopener">Facebook</a>, or call <a href="tel:09940401443">0994 040 1443</a>.</p>
+          <h3>Fill in the form</h3>
+          <p>Fill in the order form below and tap Send order. It comes straight to us. Or call <a href="tel:09940401443">0994 040 1443</a>.</p>
         </li>
         <li>
           <span class="step-no">02</span>
@@ -116,28 +123,151 @@
         </li>
         <li>
           <span class="step-no">03</span>
-          <h3>Pay with GCash</h3>
-          <p>Scan our GCash QR code below.</p>
+          <h3>Pay with GCash or cash</h3>
+          <p>Scan our GCash QR code below, or pay cash on delivery.</p>
         </li>
       </ol>
 
       <div class="order-box">
-        <div class="order-help">
-          <h3>What to include in your message</h3>
-          <ul class="checklist">
-            <li>Coco Mogu flavor and how many (Cucumber, Lychee, Strawberry)</li>
-            <li>How many fried noodles, and the sauce for each (BBQ, Oyster, Teriyaki, Peanut)</li>
-            <li>Chili garlic: yes or no</li>
-            <li>Pickup or delivery, and your address if delivery</li>
-            <li>Your name</li>
-          </ul>
+        <form id="order-form" class="order-form" novalidate>
+          <h3>Order form</h3>
+
+          <fieldset class="drink-builder">
+            <legend>Coco Mogu <span>· ₱50 each</span></legend>
+            <p class="hint">Choose your drink, then tap Add to order. Add as many as you like.</p>
+
+            <p class="mini-legend" id="flavor-label">Flavor</p>
+            <div class="choices" role="radiogroup" aria-labelledby="flavor-label">
+                <label class="choice"><input type="radio" name="flavor" value="Cucumber"><span>Cucumber</span></label>
+                <label class="choice"><input type="radio" name="flavor" value="Lychee"><span>Lychee</span></label>
+                <label class="choice"><input type="radio" name="flavor" value="Strawberry"><span>Strawberry</span></label>
+            </div>
+
+            <p class="mini-legend" id="ice-label">Ice</p>
+            <div class="choices" role="radiogroup" aria-labelledby="ice-label">
+                <label class="choice"><input type="radio" name="ice" value="regular ice" checked><span>Regular ice</span></label>
+                <label class="choice"><input type="radio" name="ice" value="less ice"><span>Less ice</span></label>
+                <label class="choice"><input type="radio" name="ice" value="more ice"><span>More ice</span></label>
+                <label class="choice"><input type="radio" name="ice" value="no ice"><span>No ice</span></label>
+            </div>
+
+            <p class="mini-legend" id="nata-label">Nata de coco</p>
+            <div class="choices" role="radiogroup" aria-labelledby="nata-label">
+                <label class="choice"><input type="radio" name="nata" value="with nata de coco" checked><span>With nata</span></label>
+                <label class="choice"><input type="radio" name="nata" value="no nata de coco"><span>Without nata</span></label>
+            </div>
+
+            <div class="drink-add">
+              <div class="stepper">
+                <button type="button" class="step" data-step="-1" data-for="d-qty" aria-label="One less of this drink">−</button>
+                <input id="d-qty" type="number" inputmode="numeric" min="1" max="50" value="1" aria-label="How many of this drink">
+                <button type="button" class="step plus" data-step="1" data-for="d-qty" aria-label="One more of this drink">+</button>
+              </div>
+              <button type="button" id="add-drink" class="btn btn-dark">Add to order</button>
+            </div>
+            <p id="drink-error" class="form-error" role="alert" hidden></p>
+
+            <ul id="drink-list" class="drink-list" aria-label="Drinks in your order"></ul>
+          </fieldset>
+
+          <fieldset class="noodle-builder">
+            <legend>Hong Kong-Style Fried Noodles with Siomai <span>· ₱60 each</span></legend>
+            <p class="hint">Choose how many noodles first. That unlocks the sauces, chili garlic and utensils, which are ₱0. Mix as many sauces as you like.</p>
+
+            <div class="qty-row">
+              <label for="n-qty"><strong>How many noodles?</strong><span class="item-note">₱60 each, topped with steamed siomai</span></label>
+              <div class="stepper">
+                <button type="button" class="step" data-step="-1" data-for="n-qty" aria-label="One less noodles">−</button>
+                <input id="n-qty" type="number" inputmode="numeric" min="0" max="50" value="0">
+                <button type="button" class="step plus" data-step="1" data-for="n-qty" aria-label="One more noodles">+</button>
+              </div>
+            </div>
+
+            <fieldset id="noodle-options" class="noodle-options" disabled>
+              <legend class="visually-hidden">Noodle options</legend>
+              <p id="noodle-lock" class="locked-note">Choose how many noodles above to unlock the sauces.</p>
+
+              <p class="mini-legend" id="sauce-label">Sauce <span class="free">optional · ₱0 · pick one, mix several, or none</span></p>
+              <div class="choices" role="group" aria-labelledby="sauce-label">
+                <label class="choice"><input type="checkbox" name="sauce" value="BBQ"><span>BBQ</span></label>
+                <label class="choice"><input type="checkbox" name="sauce" value="Oyster"><span>Oyster</span></label>
+                <label class="choice"><input type="checkbox" name="sauce" value="Teriyaki"><span>Teriyaki</span></label>
+                <label class="choice"><input type="checkbox" name="sauce" value="Peanut"><span>Peanut</span></label>
+              </div>
+
+              <p class="mini-legend" id="chili-label">Chili garlic <span class="free">₱0</span></p>
+              <div class="choices" role="radiogroup" aria-labelledby="chili-label">
+                <label class="choice"><input type="radio" name="chili" value="no chili garlic" checked><span>No chili garlic</span></label>
+                <label class="choice"><input type="radio" name="chili" value="with chili garlic"><span>Add chili garlic</span></label>
+              </div>
+
+              <p class="mini-legend" id="utensil-label">Utensils <span class="free">₱0</span></p>
+              <div class="choices" role="radiogroup" aria-labelledby="utensil-label">
+                <label class="choice"><input type="radio" name="utensil" value="spoon and fork" checked><span>Spoon and fork</span></label>
+                <label class="choice"><input type="radio" name="utensil" value="chopsticks"><span>Chopsticks</span></label>
+              </div>
+
+              <div class="drink-add">
+                <button type="button" id="add-noodles" class="btn btn-dark">Add to order</button>
+              </div>
+            </fieldset>
+            <p id="noodle-error" class="form-error" role="alert" hidden></p>
+
+            <ul id="noodle-list" class="drink-list" aria-label="Noodles in your order"></ul>
+          </fieldset>
+
+          <fieldset>
+            <legend>Your details</legend>
+            <div class="field-row">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="mobile">Mobile number</label>
+                <input id="mobile" name="mobile" type="tel" autocomplete="tel" inputmode="tel">
+              </div>
+            </div>
+            <div class="radios" role="radiogroup" aria-label="Pickup or delivery">
+              <label class="radio"><input type="radio" name="mode" value="pickup" checked> Pickup</label>
+              <label class="radio"><input type="radio" name="mode" value="delivery"> Delivery</label>
+            </div>
+            <div class="field" id="address-field">
+              <label for="address">Delivery address</label>
+              <input id="address" name="address" type="text" autocomplete="street-address">
+            </div>
+            <p class="mini-legend" id="pay-label">Payment</p>
+            <div class="radios" role="radiogroup" aria-labelledby="pay-label">
+              <label class="radio"><input type="radio" name="payment" value="GCash" checked> GCash</label>
+              <label class="radio"><input type="radio" name="payment" value="Cash on delivery"> Cash on delivery</label>
+            </div>
+            <div class="field">
+              <label for="notes">Notes (optional)</label>
+              <input id="notes" name="notes" type="text">
+            </div>
+          </fieldset>
+
+          <div class="form-total">
+            <span>Total</span>
+            <output id="total" for="order-form">₱0</output>
+          </div>
+          <p id="form-error" class="form-error" role="alert" hidden></p>
+
           <div class="actions">
-            <a class="btn" href="https://www.facebook.com/nathan.aguisanda.5" target="_blank" rel="noopener">Message your order on Facebook</a>
+            <button type="submit" class="btn" id="send-order">Send order</button>
             <a class="btn btn-outline" href="tel:09940401443">Call 0994 040 1443</a>
           </div>
-        </div>
+          <p id="form-status" class="form-status" aria-live="polite"></p>
+          <p id="send-fallback" class="send-fallback" hidden>You can still send it: <a id="fallback-link" href="mailto:natejoaquinaguisanda@gmail.com">send by your email app</a>, or copy the order below and email it to natejoaquinaguisanda@gmail.com, or call 0994 040 1443.</p>
+
+          <div id="order-preview" class="order-preview" hidden>
+            <label for="order-text">Your order message</label>
+            <textarea id="order-text" rows="11" readonly></textarea>
+          </div>
+        </form>
+
         <div class="gcash">
-          <p>Pay with GCash: scan this QR code.</p>
+          <p>Pay with GCash: scan this QR code. Or pay cash on delivery.</p>
           <img src="images/gcash-qr.png" width="600" height="1158" alt="GCash QR code for paying Coco Mogu and Fried Noodles">
         </div>
       </div>
@@ -148,9 +278,9 @@
       <dl class="details">
         <div><dt>Address</dt><dd>38 Sapphire - Franville V Street, Barangay 172, Caloocan City</dd></div>
         <div><dt>Open</dt><dd>10:00 AM to 6:00 PM</dd></div>
-        <div><dt>Facebook</dt><dd><a href="https://www.facebook.com/nathan.aguisanda.5" target="_blank" rel="noopener">Message us on Facebook</a></dd></div>
+        <div><dt>Email</dt><dd class="email"><a href="mailto:natejoaquinaguisanda@gmail.com">natejoaquinaguisanda@gmail.com</a></dd></div>
         <div><dt>Call or text</dt><dd><a href="tel:09940401443">0994 040 1443</a></dd></div>
-        <div><dt>Payment</dt><dd>GCash · <a href="#order">scan our QR code</a></dd></div>
+        <div><dt>Payment</dt><dd>GCash (<a href="#order">scan our QR code</a>) or cash on delivery</dd></div>
       </dl>
     </section>
 

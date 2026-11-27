@@ -284,7 +284,7 @@
       .then(function (result) {
         var data = result.data;
         if (result.ok && data && data.success !== false && data.success !== 'false') {
-          statusEl.textContent = 'Order sent! We got your order and will contact you at ' + mobileEl.value.trim() + ' to confirm. Salamat! To order again, refresh this web page.';
+          statusEl.textContent = 'Order sent! We got your order and will contact you at ' + mobileEl.value.trim() + ' to confirm. Salamat!';
           sendButton.textContent = 'Order sent ✓';
           $('order-again').hidden = false;
         } else {

@@ -1,11 +1,13 @@
 // Coco Mogu and Fried Noodles: order form
 // Builds the order from the drinks and noodles the customer adds,
-// and emails it to the shop.
+// and emails it to the shop through Web3Forms.
 
 (function () {
   var ORDER_EMAIL = 'natejoaquinaguisanda@gmail.com';
-  // Orders are emailed to ORDER_EMAIL by FormSubmit (formsubmit.co).
-  var SEND_URL = 'https://formsubmit.co/ajax/' + ORDER_EMAIL;
+  // Orders are emailed to you by Web3Forms (web3forms.com).
+  // Paste the access key Web3Forms emailed you between the quotes.
+  var WEB3FORMS_KEY = '9b501d5d-c678-4bc7-8c78-19ad9e802dd6';
+  var SEND_URL = 'https://api.web3forms.com/submit';
   var DRINK_PRICE = 50;
   var NOODLE_PRICE = 60;
 
@@ -266,24 +268,29 @@
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({
-        _subject: subject,
-        _template: 'box',
+        access_key: WEB3FORMS_KEY,
+        subject: subject,
+        from_name: 'Coco Mogu website',
         Name: nameEl.value.trim(),
         Mobile: mobileEl.value.trim(),
         Order: order.text,
         Total: '₱' + order.total
       })
     })
-      .then(function (res) { return res.json(); })
-      .then(function (data) {
-        if (data && (data.success === true || data.success === 'true')) {
+      .then(function (res) {
+        return res.json().then(function (data) { return { ok: res.ok, data: data }; });
+      })
+      .then(function (result) {
+        var data = result.data;
+        if (result.ok && data && data.success !== false && data.success !== 'false') {
           statusEl.textContent = 'Order sent! We got your order and will contact you at ' + mobileEl.value.trim() + ' to confirm. Salamat!';
           sendButton.textContent = 'Order sent ✓';
         } else {
           throw new Error((data && data.message) || 'not sent');
         }
       })
-      .catch(function () {
+      .catch(function (err) {
+        if (window.console) console.warn('Order not sent:', err);
         sendButton.disabled = false;
         sendButton.textContent = 'Send order';
         statusEl.textContent = 'Sorry, we couldn\'t send your order automatically.';

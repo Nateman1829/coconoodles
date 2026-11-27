@@ -6,7 +6,7 @@ A plain HTML + CSS website with one small script for the order form. No build st
 
 - `index.html` — the page
 - `style.css` — colors, fonts and layout
-- `script.js` — the order form: adds up the total and emails each order to you through FormSubmit (formsubmit.co)
+- `script.js` — the order form: adds up the total and emails each order to you through Web3Forms (web3forms.com)
 - `images/` — photos, GCash QR code, logo (`logo.svg`, and `logo-1024.png` for Facebook or printing) and the tab icon
 
 ## Publish on GitHub Pages
@@ -19,9 +19,9 @@ A plain HTML + CSS website with one small script for the order form. No build st
 
 ## Turn on order emails (one time)
 
-1. After the site is live on GitHub Pages, open it and send yourself a test order.
-2. Check natejoaquinaguisanda@gmail.com (look in Spam and Promotions too) for an email from FormSubmit and click **Activate Form**.
-3. From then on, every order arrives in your inbox as an email titled "New order from …".
+1. Go to web3forms.com, enter natejoaquinaguisanda@gmail.com and create an access key. It is emailed to you.
+2. Your key is already in `script.js` (`WEB3FORMS_KEY`). If you ever make a new key, paste it there.
+3. Every order arrives in your inbox as "New order from …".
 
 ## Making changes later
 
